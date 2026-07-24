@@ -26,6 +26,7 @@ Decisão já tomada com o usuário: **não** criar depoimentos fictícios de cli
 
 - Nenhum texto no componente é atribuído a um "cliente" — apenas à própria advogada ou dados objetivos placeholder.
 - Todos os valores placeholder (anos, setores) estão claramente marcados com comentário `TODO` para revisão futura.
+- Checagem visual via skill `run` em mobile (360–390px) e desktop, confirmando a composição foto + citação + marcadores sem quebra de layout.
 - `npm run build` e `npm run lint` passam.
 
 # Arquivos principais

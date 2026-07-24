@@ -17,7 +17,7 @@ Reaproveita o mesmo badge+wordmark do header (tarefa 02) e os dados centralizado
 - Coluna/bloco 1: badge + wordmark, uma linha curta de posicionamento (ex.: "Advocacia Contratual & Compliance").
 - Coluna/bloco 2: links rápidos de navegação (mesmas âncoras do header).
 - Coluna/bloco 3: contato — `CONTATO.email` (`mailto:`), link WhatsApp (`linkWhatsapp()`), `CONTATO.cidadeUf`, `CONTATO.oab`.
-- Ícones/links sociais (Instagram, LinkedIn) usando `CONTATO.instagram`/`CONTATO.linkedin`.
+- Ícones/links sociais (Instagram, LinkedIn) usando `CONTATO.instagram`/`CONTATO.linkedin` — SVGs inline simples (mesma técnica de ícones da tarefa 05, sem lib externa).
 - Linha final de copyright com ano dinâmico: `` `© ${new Date().getFullYear()} Juliane Ramos Advocacia. Todos os direitos reservados.` ``.
 - Mobile-first: colunas empilhadas em mobile, lado a lado (`md:grid-cols-3` ou similar) em desktop.
 
@@ -29,6 +29,7 @@ Reaproveita o mesmo badge+wordmark do header (tarefa 02) e os dados centralizado
 
 - Nenhuma string de contato hardcoded fora de `src/config/contato.ts`.
 - Ano de copyright reflete o ano atual automaticamente (testável mudando a data do sistema, se necessário).
+- Checagem visual via skill `run` em mobile (colunas empilhadas) e desktop (colunas lado a lado), sem overflow horizontal.
 - `npm run build` e `npm run lint` passam.
 
 # Arquivos principais

@@ -30,6 +30,7 @@ Header usa fundo navy sólido (ver decisão de marca no plano: o badge quadrado 
 - Em mobile (< 768px), o menu abre e fecha corretamente, sem quebrar o layout nem gerar scroll horizontal.
 - Em desktop, todos os links de navegação e o CTA são visíveis sem hambúrguer.
 - Navegação por teclado (Tab) alcança todos os itens do header, incluindo dentro do drawer mobile quando aberto.
+- Checagem visual via skill `run` em 360–390px e em desktop: badge+wordmark legíveis, sem scroll horizontal, CTA sempre visível.
 - `npm run build` e `npm run lint` passam.
 
 # Arquivos principais
