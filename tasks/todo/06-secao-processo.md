@@ -31,6 +31,7 @@ Fotos: `src/assets/persona/persona-work-coffee-desk.jpg` e `src/assets/persona/p
 
 - As 4 etapas aparecem em ordem clara (numeração visível) tanto em mobile quanto desktop.
 - Contraste de texto adequado sobre o fundo escolhido.
+- Checagem visual via skill `run` em mobile (360–390px) e desktop, confirmando a composição com as duas fotos sem quebra de layout.
 - `npm run build` e `npm run lint` passam.
 
 # Arquivos principais

@@ -29,6 +29,7 @@ Esta é a seção mais "vendedora" de escopo de serviço. Sem ícones externos (
 
 - 6 cards renderizam corretamente, sem overflow, em 360px de largura.
 - Hierarquia de heading correta (h2 da seção, h3 por card, nenhum h1 duplicado).
+- Checagem visual via skill `run` em 360px e em desktop, confirmando o grid responsivo (1 coluna mobile, 2–3 colunas desktop).
 - `npm run build` e `npm run lint` passam.
 
 # Arquivos principais
