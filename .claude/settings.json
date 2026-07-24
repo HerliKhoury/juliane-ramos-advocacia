@@ -2,13 +2,17 @@
   "permissions": {
     "allow": [
       "Bash(npm run build)",
+      "Bash(npm run build*)",
       "Bash(npm run lint)",
       "Bash(npm run lint*)",
       "Bash(npm run dev)",
       "Bash(npm run dev*)",
+      "Bash(*npm run dev*)",
       "Bash(curl -s http://localhost:*)",
       "Bash(curl -sf http://localhost:*)",
       "Bash(curl http://localhost:*)",
+      "Bash(timeout * bash -c*)",
+      "Bash(timeout * curl*)",
       "Bash(chromium-cli *)",
       "Bash(command -v *)",
       "Bash(which *)",
@@ -16,7 +20,14 @@
       "Bash(ls *)",
       "Bash(dpkg -l*)",
       "Bash(snap list*)",
-      "Bash(~/.cache/ms-playwright/*)"
+      "Bash(~/.cache/ms-playwright/*)",
+      "Bash(npx playwright install*)",
+      "Bash(npx --no-install playwright *)",
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Bash(npm ls *)",
+      "Bash(node *)",
+      "Bash(cd /tmp/claude-1000/-home-herli-Documents-projects-juliane-ramos-advocacia/*/scratchpad && *)"
     ],
     "deny": []
   }
