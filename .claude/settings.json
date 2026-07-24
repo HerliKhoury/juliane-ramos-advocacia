@@ -1,7 +1,22 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run build)"
+      "Bash(npm run build)",
+      "Bash(npm run lint)",
+      "Bash(npm run lint*)",
+      "Bash(npm run dev)",
+      "Bash(npm run dev*)",
+      "Bash(curl -s http://localhost:*)",
+      "Bash(curl -sf http://localhost:*)",
+      "Bash(curl http://localhost:*)",
+      "Bash(chromium-cli *)",
+      "Bash(command -v *)",
+      "Bash(which *)",
+      "Bash(find *)",
+      "Bash(ls *)",
+      "Bash(dpkg -l*)",
+      "Bash(snap list*)",
+      "Bash(~/.cache/ms-playwright/*)"
     ],
     "deny": []
   }
