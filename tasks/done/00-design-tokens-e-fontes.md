@@ -26,7 +26,7 @@ Tipografia: `Playfair Display` (headings) + `Inter` variable (body), self-hosted
 - `npm install @fontsource/playfair-display @fontsource-variable/inter`
 - Em `src/index.css`, após `@import "tailwindcss";`, importar os pesos de fonte necessários (ex.: `@fontsource/playfair-display/600.css`, `/700.css`; `@fontsource-variable/inter`) e declarar os tokens de marca via `@theme` do Tailwind v4 (`--color-navy`, `--color-gold`, `--color-blush`, `--color-cream`, `--color-ink`, `--color-muted`, `--font-display: "Playfair Display", serif`, `--font-sans: "Inter Variable", sans-serif`).
 - Definir estilos base: `body` com `bg-cream text-ink font-sans`, `scroll-behavior: smooth` (respeitando `prefers-reduced-motion` — só o essencial aqui, o audit completo fica pra tarefa 10), cor de seleção de texto (`::selection`) em gold sobre navy.
-- Substituir `public/favicon.svg` por uma versão em SVG do monograma JR (pode ser um SVG simples com o fundo navy `#051B32` e o monograma em gold `#CA884E` — vetorizar a forma vista em `src/assets/logo/logo-icon-gold-bg.jpg`, não precisa ser pixel-perfect).
+- Substituir `public/favicon.svg` por uma versão em SVG do monograma JR (fundo navy `#051B32`, monograma em gold `#CA884E` — vetorizar fielmente a forma vista em `src/assets/logo/logo-icon-gold-bg.jpg`; sem fonte vetorial disponível, traçar a partir do JPG, ex. via `potrace`, em vez de aproximar as curvas à mão).
 - Atualizar `index.html`: `<html lang="pt-BR">`, `<title>Juliane Ramos | Advocacia Contratual e Compliance</title>` (ajustável nas próximas tarefas de SEO).
 
 # Fora de escopo
