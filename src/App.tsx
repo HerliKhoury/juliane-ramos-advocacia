@@ -1,9 +1,26 @@
+import { Footer } from "./components/layout/Footer";
+import { Header } from "./components/layout/Header";
+import { CtaFinal } from "./components/sections/CtaFinal";
+import { Hero } from "./components/sections/Hero";
+import { Processo } from "./components/sections/Processo";
+import { ProvaSocial } from "./components/sections/ProvaSocial";
+import { Servicos } from "./components/sections/Servicos";
+import { Sobre } from "./components/sections/Sobre";
+
 function App() {
   return (
-    <main className="flex min-h-svh flex-col items-center justify-center gap-2">
-      <h1 className="text-3xl font-semibold">Juliane Ramos Advocacia</h1>
-      <p className="text-gray-500">Projeto React iniciado com Vite + Tailwind CSS.</p>
-    </main>
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <Sobre />
+        <Servicos />
+        <Processo />
+        <ProvaSocial />
+        <CtaFinal />
+      </main>
+      <Footer />
+    </>
   )
 }
 
