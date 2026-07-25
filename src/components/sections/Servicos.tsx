@@ -103,7 +103,7 @@ type ServicoGrupoProps = {
 function ServicoGrupo({ titulo, servicos }: ServicoGrupoProps) {
   return (
     <div className="flex flex-col gap-6">
-      <span className="text-sm font-semibold uppercase tracking-wide text-gold">
+      <span className="text-sm font-semibold uppercase tracking-wide text-gold-ink">
         {titulo}
       </span>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

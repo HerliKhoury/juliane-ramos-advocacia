@@ -19,13 +19,14 @@ export function ProvaSocial() {
         <div className="lg:flex-1">
           <img
             src={personaPortraitCloseup}
-            alt="Retrato de Juliane Ramos"
+            alt="Retrato aproximado de Juliane Ramos, transmitindo confiança e proximidade com o cliente"
             loading="lazy"
             className="aspect-[4/5] w-full rounded-lg object-cover lg:aspect-auto lg:h-[480px]"
           />
         </div>
 
         <div className="flex flex-col items-start gap-6 lg:flex-1">
+          <h2 className="sr-only">Credibilidade</h2>
           {/* Citação de autoria da própria advogada — não é testemunho de terceiro. */}
           <blockquote className="border-l-4 border-gold pl-5">
             <p className="font-display text-2xl font-semibold leading-snug text-ink sm:text-3xl">
