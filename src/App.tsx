@@ -1,5 +1,6 @@
 import { Header } from "./components/layout/Header";
 import { Hero } from "./components/sections/Hero";
+import { Sobre } from "./components/sections/Sobre";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <Sobre />
       </main>
     </>
   )
