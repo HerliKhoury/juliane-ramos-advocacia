@@ -27,7 +27,23 @@
       "Bash(npm install *)",
       "Bash(npm ls *)",
       "Bash(node *)",
-      "Bash(cd /tmp/claude-1000/-home-herli-Documents-projects-juliane-ramos-advocacia/*/scratchpad && *)"
+      "Bash(cd /tmp/claude-1000/-home-herli-Documents-projects-juliane-ramos-advocacia/*/scratchpad && *)",
+      "Bash(file *)",
+      "Bash(python3 *)",
+      "Bash(identify *)",
+      "Bash(echo *)",
+      "Bash(grep *)",
+      "Bash(dirname *)",
+      "Bash(cat *)",
+      "Bash(head *)",
+      "Bash(lsof *)",
+      "Bash(xargs *)",
+      "Bash(disown)",
+      "Bash(disown *)",
+      "Bash(bash *)",
+      "Bash(ps *)",
+      "Bash(pkill *)",
+      "Bash(npx playwright *)"
     ],
     "deny": []
   }
