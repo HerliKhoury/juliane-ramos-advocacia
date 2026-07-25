@@ -19,7 +19,7 @@ export function Hero() {
         </div>
 
         <div className="order-2 flex flex-col items-start gap-5 lg:order-1 lg:flex-1">
-          <span className="text-sm font-semibold uppercase tracking-wide text-gold">
+          <span className="text-sm font-semibold uppercase tracking-wide text-gold-ink">
             Advocacia Contratual &amp; Compliance
           </span>
           <h1 className="font-display text-4xl font-semibold leading-tight text-ink sm:text-5xl">
