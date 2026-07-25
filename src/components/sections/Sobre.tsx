@@ -19,6 +19,7 @@ export function Sobre() {
             src={personaAbout}
             alt="Juliane Ramos em ambiente de escritório, retrato profissional"
             loading="lazy"
+            decoding="async"
             className="aspect-[4/5] w-full rounded-lg object-cover lg:aspect-auto lg:h-[560px]"
           />
         </div>

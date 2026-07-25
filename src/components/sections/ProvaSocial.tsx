@@ -21,6 +21,7 @@ export function ProvaSocial() {
             src={personaPortraitCloseup}
             alt="Retrato aproximado de Juliane Ramos, transmitindo confiança e proximidade com o cliente"
             loading="lazy"
+            decoding="async"
             className="aspect-[4/5] w-full rounded-lg object-cover lg:aspect-auto lg:h-[480px]"
           />
         </div>

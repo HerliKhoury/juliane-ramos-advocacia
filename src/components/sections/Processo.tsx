@@ -71,6 +71,7 @@ export function Processo() {
             src={personaCoffeeDesk}
             alt="Juliane Ramos trabalhando em sua mesa com um café"
             loading="lazy"
+            decoding="async"
             className="aspect-[4/5] w-full rounded-lg object-cover lg:aspect-auto lg:h-[420px] lg:flex-1"
           />
           <ol className="flex flex-col gap-8 lg:flex-1">
@@ -84,6 +85,7 @@ export function Processo() {
             src={personaWritingNotes}
             alt="Juliane Ramos anotando durante o desenvolvimento de um caso"
             loading="lazy"
+            decoding="async"
             className="aspect-[4/5] w-full rounded-lg object-cover lg:aspect-auto lg:h-[420px] lg:flex-1"
           />
           <ol className="flex flex-col gap-8 lg:flex-1" start={3}>
