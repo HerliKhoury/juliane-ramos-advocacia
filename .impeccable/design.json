@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-26T12:00:00.000Z",
+  "title": "Design System: Juliane Ramos Advocacia",
+  "extensions": {
+    "colorMeta": {
+      "deep-navy": { "role": "primary", "displayName": "Deep Navy", "canonical": "#051B32", "tonalRamp": ["#020a13", "#04122199", "#051B32", "#0b2c50", "#12406e", "#2c5a86", "#6f8ba3", "#c3d0dc"] },
+      "warm-gold": { "role": "secondary", "displayName": "Warm Gold", "canonical": "#CA884E", "tonalRamp": ["#3d260f", "#5c3a18", "#8d5f37", "#ca884e", "#d9a26f", "#e5bd97", "#f0d9c1", "#f9eee2"] },
+      "gold-ink": { "role": "secondary-deep", "displayName": "Gold Ink", "canonical": "#8D5F37" },
+      "soft-blush": { "role": "tertiary", "displayName": "Soft Blush", "canonical": "#E8B095", "tonalRamp": ["#4a2416", "#6f3a24", "#a85f3f", "#e8b095", "#eec3ab", "#f2d5c4", "#f7e5da", "#fbf3ee"] },
+      "paper-cream": { "role": "neutral-bg", "displayName": "Paper Cream", "canonical": "#FBF8F4" },
+      "ink": { "role": "neutral-text", "displayName": "Ink", "canonical": "#0F2438" },
+      "muted-slate": { "role": "neutral-text-secondary", "displayName": "Muted Slate", "canonical": "#5B6B7A" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display (Playfair Display)", "purpose": "H1/H2 headings, list-item and quote titles, oversized index numerals." },
+      "body": { "displayName": "Body (Inter Variable)", "purpose": "Paragraph copy, labels, nav, buttons." }
+    },
+    "shadows": [
+      { "name": "mounted-print", "value": "0 20px 45px -22px rgba(0,0,0,0.5)", "purpose": "Under every FramedPhoto documentary photograph." },
+      { "name": "portrait-drop", "value": "drop-shadow(0 35px 50px rgba(0,0,0,0.38))", "purpose": "Under the CutoutPortrait silhouette; follows alpha shape, not a box." },
+      { "name": "header-scrolled", "value": "0 12px 30px -18px rgba(0,0,0,0.7)", "purpose": "Sticky header once scrollY > 8px." }
+    ],
+    "motion": [
+      { "name": "ease-editorial", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Ease-out-expo used by every authored transition: reveal, spine draw, signature stroke, nav underline." },
+      { "name": "reveal", "value": "opacity 0.8s var(--ease-editorial), transform 0.8s var(--ease-editorial)", "purpose": "One-shot scroll reveal via IntersectionObserver, staggered ~110-150ms per sibling." },
+      { "name": "spine-draw", "value": "transform 1.1s var(--ease-editorial)", "purpose": "Processo's connecting line between two step numbers, scaleY 0 to 1." },
+      { "name": "signature-stroke", "value": "stroke-dashoffset 1.1s var(--ease-editorial) 0.2s", "purpose": "CTA heading's hand-drawn underline, pathLength=1 draw-in." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Solid gold CTA — WhatsApp/consultation conversion actions.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Agende uma consulta</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 2.75rem; padding: 0 1.5rem; border-radius: 6px; background: #CA884E; color: #051B32; font-family: 'Inter Variable', sans-serif; font-size: 0.875rem; font-weight: 600; text-decoration: none; transition: background-color 0.2s; } .ds-btn-primary:hover { background: color-mix(in srgb, #CA884E 90%, transparent); } .ds-btn-primary:focus-visible { outline: 2px solid #CA884E; outline-offset: 2px; }"
+    },
+    {
+      "name": "Outline Inverse Button",
+      "kind": "button",
+      "refersTo": "button-outline-inverse",
+      "description": "Secondary action on navy surfaces (e.g. 'Enviar e-mail' beside the primary WhatsApp CTA).",
+      "html": "<a class=\"ds-btn-outline-inverse\" href=\"#\">Enviar e-mail</a>",
+      "css": ".ds-btn-outline-inverse { display: inline-flex; align-items: center; justify-content: center; min-height: 2.75rem; padding: 0 1.5rem; border-radius: 6px; border: 1px solid rgba(251,248,244,0.6); color: #FBF8F4; background: transparent; font-family: 'Inter Variable', sans-serif; font-size: 0.875rem; font-weight: 600; text-decoration: none; transition: background-color 0.2s; } .ds-btn-outline-inverse:hover { background: rgba(251,248,244,0.1); }"
+    },
+    {
+      "name": "Framed Photo",
+      "kind": "custom",
+      "refersTo": "framed-photo",
+      "description": "Documentary photograph with an offset gold rule-frame and neutral mounted-print shadow.",
+      "html": "<div class=\"ds-framed-photo\"><div class=\"ds-framed-photo__frame\" aria-hidden=\"true\"></div><div class=\"ds-framed-photo__img\"></div></div>",
+      "css": ".ds-framed-photo { position: relative; width: 260px; aspect-ratio: 4 / 5; } .ds-framed-photo__frame { position: absolute; bottom: -12px; right: -12px; height: 100%; width: 100%; border-radius: 8px; border: 1px solid rgba(202,136,78,0.5); } .ds-framed-photo__img { position: relative; height: 100%; width: 100%; border-radius: 8px; background: linear-gradient(160deg, #2c3f52, #0f2438); box-shadow: 0 20px 45px -22px rgba(0,0,0,0.5); }"
+    },
+    {
+      "name": "Cutout Portrait",
+      "kind": "custom",
+      "refersTo": "cutout-portrait",
+      "description": "Background-removed portrait floating on a navy mounting plate; used only in Hero and ProvaSocial.",
+      "html": "<div class=\"ds-cutout\"><div class=\"ds-cutout__plate\" aria-hidden=\"true\"></div><div class=\"ds-cutout__figure\"></div></div>",
+      "css": ".ds-cutout { position: relative; width: 240px; aspect-ratio: 4 / 5; } .ds-cutout__plate { position: absolute; inset: 2.5rem 1.5rem; border-radius: 1.75rem; background: #051B32; } .ds-cutout__figure { position: relative; height: 100%; width: 100%; filter: drop-shadow(0 35px 50px rgba(0,0,0,0.38)); background: radial-gradient(circle at 50% 35%, #d9a26f 0 22%, transparent 23%), linear-gradient(180deg, transparent 45%, #f2e6da 46%); background-size: 100% 100%; }"
+    },
+    {
+      "name": "Service Index Row",
+      "kind": "custom",
+      "refersTo": "service-index-item",
+      "description": "One row of the Servicos index list: faint numeral, icon + title, description. No card shell.",
+      "html": "<ul class=\"ds-index\"><li class=\"ds-index__row\"><span class=\"ds-index__num\">01</span><div><h3 class=\"ds-index__title\">Elaboração de Contratos</h3><p class=\"ds-index__desc\">Redação de contratos sob medida, com cláusulas claras que protegem os interesses do seu negócio.</p></div></li></ul>",
+      "css": ".ds-index { list-style: none; margin: 0; padding: 0; border-top: 1px solid rgba(5,27,50,0.1); border-bottom: 1px solid rgba(5,27,50,0.1); } .ds-index__row { display: flex; gap: 2rem; align-items: baseline; padding: 1.75rem 0; } .ds-index__num { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: rgba(202,136,78,0.4); width: 3rem; flex-shrink: 0; } .ds-index__title { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: #0F2438; margin: 0 0 0.5rem; } .ds-index__desc { font-family: 'Inter Variable', sans-serif; font-size: 1rem; color: #5B6B7A; margin: 0; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Counsel's Dossier",
+    "overview": "The site reads as a formally bound legal dossier translated to screen, not a law-firm marketing template. Its structural vocabulary comes from the physical grammar of contract work: a letterhead rule under the header, mounted-print offset frames behind documentary photographs, a table-of-contents-style index for the services list, and portraits background-removed and set on navy mounting plates like a formal portfolio print. Numerals and rule lines stand in for the marginalia of a paper document — margin ticks, a running folio, an index number — rather than decorative UI chrome.\n\nThe palette and type pairing (navy/gold/cream/blush, Playfair Display + Inter) are locked, pre-existing brand commitments; this system does not change them. What it changes is composition and craft: asymmetric layouts over centered symmetric grids, an index list over icon-in-circle cards, one restrained motion grammar (scroll reveal, a hand-drawn signature stroke, a spine line connecting process steps) instead of no motion at all.",
+    "keyCharacteristics": [
+      "Editorial-dossier composition: mounted-print photo frames, index lists, letterhead rules.",
+      "Two photo treatments only: full-frame documentary shots (offset frame) and background-removed cutouts (navy plate) — cutouts reserved for Hero and ProvaSocial only.",
+      "One eyebrow label in the whole page (the Hero's brand tagline) — every other section leads with its heading directly.",
+      "Motion is one-shot scroll-reveal plus a small number of named signature moments, never per-element decoration."
+    ],
+    "rules": [
+      { "name": "The One Accent Rule", "body": "Gold is the only chromatic accent on the page. Every other color is navy, cream, blush, or a neutral derived from them.", "section": "colors" },
+      { "name": "The Neutral Shadow Rule", "body": "Every shadow uses neutral black (rgba(0,0,0,…)), even on navy surfaces, to avoid a chromatic-glow read.", "section": "elevation" },
+      { "name": "The One Eyebrow Rule", "body": "The tracked-uppercase-label device appears exactly once, as the Hero's brand tagline. Applying it to every section is unexamined grammar, not a deliberate accent.", "section": "typography" },
+      { "name": "The Earned Shadow Rule", "body": "Shadow appears only where something is physically lifted off the page — never as generic card elevation.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep shadows neutral black even on navy surfaces.",
+      "Do drive all motion with transform/opacity, never width/height/padding/margin.",
+      "Do wrap scroll-triggered elements in Reveal (or the raw data-reveal/useInView primitives) so prefers-reduced-motion disables everything from one place.",
+      "Do reserve CutoutPortrait for the two confirmed background-removed portraits only."
+    ],
+    "donts": [
+      "Don't add a tracked-uppercase eyebrow label above a section heading beyond the Hero tagline and the two Servicos group labels.",
+      "Don't reintroduce icon-in-a-colored-circle cards for lists of 3+ similar items.",
+      "Don't change the locked palette, font pairing, or logo lockup.",
+      "Don't fabricate credentials, statistics, testimonials, or contact details."
+    ]
+  }
+}

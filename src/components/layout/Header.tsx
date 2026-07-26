@@ -11,12 +11,22 @@ const NAV_LINKS = [
 ];
 
 const NAV_LINK_CLASSES =
-  "text-cream transition-colors hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold";
+  "relative text-cream transition-colors after:absolute after:inset-x-0 after:-bottom-1.5 after:h-px after:origin-left after:scale-x-0 after:bg-gold after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.16,1,0.3,1)] hover:text-gold hover:after:scale-x-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    function handleScroll() {
+      setIsScrolled(window.scrollY > 8);
+    }
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     if (!isMenuOpen) return;
@@ -45,15 +55,21 @@ export function Header() {
   }, [isMenuOpen]);
 
   return (
-    <header className="sticky top-0 z-50 bg-navy">
+    <header
+      className={`sticky top-0 z-50 border-b bg-navy transition-shadow duration-300 ${
+        isScrolled
+          ? "border-gold/30 shadow-[0_12px_30px_-18px_rgba(0,0,0,0.7)]"
+          : "border-gold/15"
+      }`}
+    >
       <Container className="flex h-16 items-center justify-between md:h-20">
-        <a href="#" className="flex items-center gap-2.5">
-          <img src="/favicon.svg" alt="" className="h-9 w-9 rounded-md" />
+        <a href="#" className="group flex items-center gap-2.5">
+          <img src="/favicon.svg" alt="" className="h-9 w-9 rounded-md ring-1 ring-gold/40" />
           <span className="flex flex-col leading-tight">
             <span className="font-display text-lg font-semibold text-gold md:text-xl">
               Juliane Ramos
             </span>
-            <span className="text-xs text-cream/80">Advogada</span>
+            <span className="text-xs tracking-[0.14em] text-cream/70 uppercase">Advogada</span>
           </span>
         </a>
 

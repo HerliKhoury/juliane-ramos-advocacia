@@ -9,15 +9,19 @@ const NAV_LINKS = [
 ];
 
 const LINK_CLASSES =
-  "text-cream/80 transition-colors hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold";
+  "relative w-fit text-cream/80 transition-colors after:absolute after:inset-x-0 after:-bottom-1 after:h-px after:origin-left after:scale-x-0 after:bg-gold after:transition-transform after:duration-300 hover:text-gold hover:after:scale-x-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold";
 
 export function Footer() {
   return (
-    <footer className="bg-navy text-cream">
+    <footer className="border-t border-gold/20 bg-navy text-cream">
       <Container className="grid grid-cols-1 gap-10 py-16 md:grid-cols-3 md:py-20">
         <div className="flex flex-col gap-3">
           <a href="#" className="flex items-center gap-2.5">
-            <img src="/favicon.svg" alt="" className="h-9 w-9 rounded-md" />
+            <img
+              src="/favicon.svg"
+              alt=""
+              className="h-9 w-9 rounded-md ring-1 ring-gold/40"
+            />
             <span className="flex flex-col leading-tight">
               <span className="font-display text-lg font-semibold text-gold">
                 Juliane Ramos

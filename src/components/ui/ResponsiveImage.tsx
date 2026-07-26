@@ -9,6 +9,8 @@ type ResponsiveImageProps = {
   className?: string;
   sizes?: string;
   priority?: boolean;
+  /** "contain" for cutout/silhouette PNGs that must not be cropped. */
+  fit?: "cover" | "contain";
 };
 
 // Column-width photos in the two-column sections land around 450-560px on
@@ -21,6 +23,7 @@ export function ResponsiveImage({
   className = "",
   sizes = DEFAULT_SIZES,
   priority = false,
+  fit = "cover",
 }: ResponsiveImageProps) {
   // `className` (sizing, aspect-ratio, flex-grow, etc.) belongs on this
   // element: in a flex/grid layout, `<picture>` is the actual item being
@@ -38,7 +41,7 @@ export function ResponsiveImage({
         loading={priority ? "eager" : "lazy"}
         decoding={priority ? undefined : "async"}
         fetchPriority={priority ? "high" : undefined}
-        className="h-full w-full rounded-[inherit] object-cover"
+        className={`h-full w-full rounded-[inherit] ${fit === "contain" ? "object-contain" : "object-cover"}`}
       />
     </picture>
   );

@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Reveal } from "../motion/Reveal";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
 
@@ -100,28 +101,41 @@ type ServicoGrupoProps = {
   servicos: Servico[];
 };
 
+// An index list, not a grid of icon cards — each row reads like an entry in
+// a dossier's table of contents, with the numeral as quiet background type.
 function ServicoGrupo({ titulo, servicos }: ServicoGrupoProps) {
   return (
     <div className="flex flex-col gap-6">
-      <span className="text-sm font-semibold uppercase tracking-wide text-gold-ink">
+      <Reveal
+        as="span"
+        className="text-sm font-semibold tracking-[0.08em] text-gold-ink uppercase"
+      >
         {titulo}
-      </span>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {servicos.map((servico) => (
-          <article
+      </Reveal>
+      <ul className="divide-y divide-navy/10 border-y border-navy/10">
+        {servicos.map((servico, index) => (
+          <Reveal
             key={servico.titulo}
-            className="flex flex-col items-start gap-4 rounded-lg border border-navy/10 bg-cream p-6 shadow-sm"
+            as="li"
+            delayStep={index + 1}
+            className="group flex flex-col gap-3 py-7 sm:flex-row sm:items-baseline sm:gap-8"
           >
-            <div className="flex size-11 items-center justify-center rounded-full bg-blush/20 text-gold">
-              {servico.icone}
+            <span
+              aria-hidden="true"
+              className="font-display text-3xl leading-none font-semibold text-gold/40 transition-colors duration-300 group-hover:text-gold/75 sm:w-12 sm:shrink-0"
+            >
+              {String(index + 1).padStart(2, "0")}
+            </span>
+            <div className="flex flex-col gap-2">
+              <h3 className="inline-flex items-center gap-2.5 font-display text-xl font-semibold text-ink">
+                <span className="text-gold [&>svg]:h-5 [&>svg]:w-5">{servico.icone}</span>
+                {servico.titulo}
+              </h3>
+              <p className="max-w-xl text-base text-muted">{servico.descricao}</p>
             </div>
-            <h3 className="font-display text-xl font-semibold text-ink">
-              {servico.titulo}
-            </h3>
-            <p className="text-base text-muted">{servico.descricao}</p>
-          </article>
+          </Reveal>
         ))}
-      </div>
+      </ul>
     </div>
   );
 }
@@ -129,12 +143,17 @@ function ServicoGrupo({ titulo, servicos }: ServicoGrupoProps) {
 export function Servicos() {
   return (
     <Section id="servicos" variant="cream">
-      <Container className="flex flex-col gap-12">
-        <h2 className="font-display text-3xl font-semibold leading-tight text-ink sm:text-4xl">
-          Áreas de Atuação
-        </h2>
-        <ServicoGrupo titulo="Contratos" servicos={SERVICOS_CONTRATOS} />
-        <ServicoGrupo titulo="Compliance" servicos={SERVICOS_COMPLIANCE} />
+      <Container className="flex flex-col gap-14">
+        <Reveal
+          as="h2"
+          className="font-display text-3xl leading-tight font-semibold text-ink sm:text-4xl"
+        >
+          Duas frentes, um mesmo compromisso
+        </Reveal>
+        <div className="grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-16">
+          <ServicoGrupo titulo="Contratos" servicos={SERVICOS_CONTRATOS} />
+          <ServicoGrupo titulo="Compliance" servicos={SERVICOS_COMPLIANCE} />
+        </div>
       </Container>
     </Section>
   );
