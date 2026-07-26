@@ -1,7 +1,8 @@
-import personaCoffeeDesk from "../../assets/persona/persona-work-coffee-desk.jpg";
-import personaWritingNotes from "../../assets/persona/persona-work-writing-notes.jpg";
+import personaCoffeeDesk from "../../assets/persona/persona-work-coffee-desk.jpg?format=webp;jpg&w=480;900&as=picture";
+import personaWritingNotes from "../../assets/persona/persona-work-writing-notes.jpg?format=webp;jpg&w=480;900&as=picture";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
+import { ResponsiveImage } from "../ui/ResponsiveImage";
 
 type Etapa = {
   numero: string;
@@ -67,11 +68,9 @@ export function Processo() {
         </h2>
 
         <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-16">
-          <img
-            src={personaCoffeeDesk}
+          <ResponsiveImage
+            picture={personaCoffeeDesk}
             alt="Juliane Ramos trabalhando em sua mesa com um café"
-            loading="lazy"
-            decoding="async"
             className="aspect-[4/5] w-full rounded-lg object-cover lg:aspect-auto lg:h-[420px] lg:flex-1"
           />
           <ol className="flex flex-col gap-8 lg:flex-1">
@@ -81,11 +80,9 @@ export function Processo() {
         </div>
 
         <div className="flex flex-col gap-10 lg:flex-row-reverse lg:items-center lg:gap-16">
-          <img
-            src={personaWritingNotes}
+          <ResponsiveImage
+            picture={personaWritingNotes}
             alt="Juliane Ramos anotando durante o desenvolvimento de um caso"
-            loading="lazy"
-            decoding="async"
             className="aspect-[4/5] w-full rounded-lg object-cover lg:aspect-auto lg:h-[420px] lg:flex-1"
           />
           <ol className="flex flex-col gap-8 lg:flex-1" start={3}>

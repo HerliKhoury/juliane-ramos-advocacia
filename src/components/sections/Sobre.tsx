@@ -1,7 +1,8 @@
-import personaAbout from "../../assets/persona/persona-about-studio-portrait.jpg";
+import personaAbout from "../../assets/persona/persona-about-studio-portrait.jpg?format=webp;jpg&w=480;900&as=picture";
 import { CONTATO } from "../../config/contato";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
+import { ResponsiveImage } from "../ui/ResponsiveImage";
 
 const CREDENCIAIS = [
   `OAB ${CONTATO.oab}`,
@@ -15,11 +16,9 @@ export function Sobre() {
     <Section id="sobre" variant="blush-tint">
       <Container className="flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-16">
         <div className="lg:flex-1">
-          <img
-            src={personaAbout}
+          <ResponsiveImage
+            picture={personaAbout}
             alt="Juliane Ramos em ambiente de escritório, retrato profissional"
-            loading="lazy"
-            decoding="async"
             className="aspect-[4/5] w-full rounded-lg object-cover lg:aspect-auto lg:h-[560px]"
           />
         </div>

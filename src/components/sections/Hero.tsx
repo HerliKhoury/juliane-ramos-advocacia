@@ -1,19 +1,19 @@
-import personaHero from "../../assets/persona/persona-hero-white-blazer.jpg";
+import personaHero from "../../assets/persona/persona-hero-white-blazer.jpg?format=webp;jpg&w=480;900&as=picture";
 import { linkWhatsapp } from "../../config/contato";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
 import { Button } from "../ui/Button";
+import { ResponsiveImage } from "../ui/ResponsiveImage";
 
 export function Hero() {
   return (
     <Section variant="cream">
       <Container className="flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-16">
         <div className="order-1 lg:order-2 lg:flex-1">
-          <img
-            src={personaHero}
+          <ResponsiveImage
+            picture={personaHero}
             alt="Juliane Ramos, advogada especialista em contratos e compliance"
-            loading="eager"
-            fetchPriority="high"
+            priority
             className="aspect-[4/5] w-full rounded-lg object-cover lg:aspect-auto lg:h-[560px]"
           />
         </div>

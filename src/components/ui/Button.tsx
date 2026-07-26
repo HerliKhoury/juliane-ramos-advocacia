@@ -4,12 +4,15 @@ import type {
   ReactNode,
 } from "react";
 
-type ButtonVariant = "primary" | "outline" | "ghost";
+type ButtonVariant = "primary" | "outline" | "ghost" | "outline-inverse";
 
 const VARIANT_CLASSES: Record<ButtonVariant, string> = {
   primary: "bg-gold text-navy hover:bg-gold/90",
   outline: "border border-navy text-navy hover:bg-navy/5",
   ghost: "text-navy hover:bg-navy/5",
+  // For use on dark (e.g. navy) section backgrounds, where `outline`'s navy
+  // border/text would be invisible.
+  "outline-inverse": "border border-cream/60 text-cream hover:bg-cream/10",
 };
 
 const BASE_CLASSES =

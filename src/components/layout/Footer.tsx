@@ -34,7 +34,7 @@ export function Footer() {
               target="_blank"
               rel="noreferrer noopener"
               aria-label="Instagram"
-              className="text-cream/80 transition-colors hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+              className="-m-2.5 inline-flex size-11 items-center justify-center rounded-md text-cream/80 transition-colors hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
             >
               <IconeInstagram />
             </a>
@@ -43,7 +43,7 @@ export function Footer() {
               target="_blank"
               rel="noreferrer noopener"
               aria-label="LinkedIn"
-              className="text-cream/80 transition-colors hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+              className="-m-2.5 inline-flex size-11 items-center justify-center rounded-md text-cream/80 transition-colors hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
             >
               <IconeLinkedin />
             </a>

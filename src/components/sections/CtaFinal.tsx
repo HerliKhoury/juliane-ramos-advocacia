@@ -21,14 +21,10 @@ export function CtaFinal() {
           >
             Chamar no WhatsApp
           </Button>
-          {/* Button outline é `border-navy text-navy`, invisível sobre fundo navy. O variant ghost
-              também parte de `text-navy`; como utilities de mesma especificidade no Tailwind v4
-              não seguem a ordem das classes no atributo, usamos `!` para garantir que os tons
-              cream vençam sobre fundo navy. */}
           <Button
             href={`mailto:${CONTATO.email}`}
-            variant="ghost"
-            className="w-full border border-cream/60 text-cream! hover:bg-cream/10! sm:w-auto"
+            variant="outline-inverse"
+            className="w-full sm:w-auto"
           >
             Enviar e-mail
           </Button>
