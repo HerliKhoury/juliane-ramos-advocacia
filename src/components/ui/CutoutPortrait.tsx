@@ -19,7 +19,7 @@ export function CutoutPortrait({ picture, alt, className = "", priority }: Cutou
     <div className={`relative ${className}`}>
       <div
         aria-hidden="true"
-        className="absolute inset-x-6 inset-y-10 rounded-[1.75rem] bg-navy sm:inset-x-10 sm:inset-y-14"
+        className="absolute inset-x-6 top-16 bottom-0 rounded-[1.75rem] bg-navy sm:inset-x-10 sm:top-24 sm:bottom-0"
       />
       <ResponsiveImage
         picture={picture}
